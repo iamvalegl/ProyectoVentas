@@ -1,0 +1,63 @@
+table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+th, td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+th{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.buscar{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+.contenidoBuscar{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.insertarDatos{
+   
+font-size: 40px;
+font-weight: bold;
+width: 89%;
+text-align: right;
+margin: 10px 0px 10px 0px;
+
+}
+.insertarDatos a{
+    text-decoration: none;
+}
+input[type=text]{
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid #534d4d;
+    margin: 10px 0px 10px 0px;
+    box-sizing: border-box;
+    resize: vertical;
+    }
+input[type=submit]{
+    width: 20%;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #0c6828;
+    color: #fcfbfb;
+    
+    margin: 10px 0px 10px 0px;
+    box-sizing: border-box;
+    resize: vertical;
+    }
+label{
+    display: inline-block;
+}
+.logo-usuario{
+    width: 25px;
+}

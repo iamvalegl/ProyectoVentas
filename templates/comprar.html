@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPRAS</title>
+    <link rel="stylesheet" href="../static/formulario.css">
+</head>
+<body>
+<div class="formulario">
+
+    <form method="post" action="/comprar">
+        <input type="hidden" name="txtid" value="{{id}}">
+        <p>Nombre del cliente: {{datos[1]}}</p>
+        <p>NIT del cliente: {{datos[2]}}</p>
+        <label for="Producto">Producto</label>
+        <select name="txtproducto" required>
+            <option value="cocacola">Cocacola</option>
+            <option value="pepsi">Pepsi</option>
+            <option value="agua">Agua</option>
+            <option value="fanta">Fanta</option>
+            <option value="sprite">Sprite</option>
+            <option value="cascada">Cascada</option>
+        </select>
+        
+        <label for="Cantidad">Cantidad</label>
+        <input type="text" name="txtcantidad" required><br>
+        <label for="Costo">Costo</label>
+        <input type="text" name="txtcosto" required><br>
+        <input type="submit" value="REGISTRAR">
+        <input type="submit" value="CANCELAR" onclick="window.location.href='/'">
+    </form>
+</div>
+</body>
+</html>

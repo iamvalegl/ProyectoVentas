@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VER DETALLE DE COMPRAS</title>
+    <link rel="stylesheet" href="../static/estilos.css">
+</head>
+<body>
+    <a href="/">REGRESAR</a>
+    <h2>DETALLE COMPRA</h2>
+    {% if datos %}
+    <p><a href="/reporte/{{datos[0][4]}}" target="_blank">PDF</a></p>
+    {% endif %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>PRODUCTO</th>
+            <th>CANTIDAD</th>
+            <th>COSTO</th>
+            <th>TOTAL</th>
+        </tr>
+        {%for dato in datos %}
+        <tr>
+            <td>{{dato[0]}}</td>
+            <td>{{dato[1]}}</td>
+            <td>{{dato[2]}}</td>
+            <td>{{dato[3]}}</td>
+            <td>{{dato[2]*dato[3]}}</td>
+            
+        </tr>
+{% endfor %}        
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREAR USUARIOS</title>
+    <link rel="stylesheet" href="../static/formulario.css">
+</head>
+<body>
+    <h1>REGISTRAR NUEVO USUARIO</h1>
+    <form action="/insertar_usuario" method="post">
+        <label for="txtuser">USUARIO</label>
+        <input type="text" name="txtuser" required><br><br>
+        <label for="txtclave">CONTRASEÑA</label>
+        <input type="password" name="txtclave" required><br><br>
+        <label for="txtclaveRepetir">REPETIR CONTRASEÑA</label>
+        <input type="password" name="txtclaveRepetir" required><br><br>
+        <label for="txtrol">ROL</label>
+        <select name="txtrol" id="">
+            <option value="root">ROOT</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+        <input type="submit" value="REGISTRAR">
+
+        {% if mensaje %}
+        <p style="color: red;">{{mensaje}}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

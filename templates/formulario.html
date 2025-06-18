@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/estilos.css">
+</head>
+<body>
+    <p><a href="/logout">Cerrar Sesion</a></p>
+    <div class="contenidoBuscar">
+        <div class="buscar">
+            <form action="/buscar" method="get">
+                <input type="text" name="txtbuscar">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </div>
+    
+    <div class="insertarDatos">
+        <a href="/usuarios"><img class="logo-usuario" src="../static/nueva-cuenta.png" alt=""></a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" id="modal" title="Insertar Datos">+</a>
+    </div>
+    
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroLabel">Nuevo Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="contenido-modal">
+                    <!-- Aquí se cargará el formulario con AJAX -->
+                    <form method="post" action="/registro">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="Nombre" name="txtnombre" required><br>
+                        <label for="nit">Nit</label>
+                        <input type="text" id="nit" name="txtnit" required><br>
+                        <input type="submit" value="Registrar">
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>NIT</th>
+            <th colspan="4">ACCIONES</th>
+        </tr>
+        {%for dato in mostrar %}
+        <tr>
+            <td>{{dato[0]}}</td>
+            <td>{{dato[1]}}</td>
+            <td>{{dato[2]}}</td>
+            <td><a href="/actualizar/{{dato[0]}}">Editar</a></td>
+            <td><a href="/eliminar/{{dato[0]}}" onclick="return confirm('¿Estas seguro que deseas eliminar?')">Eliminar</a></td>
+            <td><a href="/comprar/{{dato[0]}}">Vender</a></td>
+            <td><a href="/vercompras/{{dato[0]}}">VER COMPRAS</a></td>
+        </tr>
+{% endfor %}        
+    </table>
+
+<script>
+  $(document).ready(function() {
+    $('#modalRegistro').on('show.bs.modal', function () {
+      $('#contenido-modal').load('/registro');
+    });
+  });
+</script>
+<!-- Bootstrap JS + Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (necesario para AJAX) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
