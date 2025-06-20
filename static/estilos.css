@@ -61,3 +61,150 @@ label{
 .logo-usuario{
     width: 25px;
 }
+.link-ver-usuarios{
+    font-size: 20px;
+}
+
+
+body {
+    background: #fef6fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: #444;
+}
+
+/* Enlace de cerrar sesión */
+p a {
+    color: #e26aa5;
+    font-weight: bold;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Buscador */
+.contenidoBuscar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.buscar input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #eac5d8;
+    border-radius: 8px;
+    background-color: #fff0f6;
+}
+.buscar input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #e26aa5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.buscar input[type="submit"]:hover {
+    background-color: #d24b8e;
+}
+
+/* Área de botones */
+.insertarDatos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+.link-ver-usuarios {
+    text-decoration: none;
+    color: #8f5eaa;
+    font-weight: 600;
+}
+.link-ver-usuarios:hover {
+    text-decoration: underline;
+}
+
+.logo-usuario {
+    width: 40px;
+    height: 40px;
+}
+
+.insertarDatos a[title="Insertar Datos"] {
+    background-color: #c084fc;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(192, 132, 252, 0.3);
+    transition: background-color 0.3s;
+}
+.insertarDatos a[title="Insertar Datos"]:hover {
+    background-color: #a855f7;
+}
+
+/* Modal */
+.modal-body form label {
+    display: block;
+    margin-top: 10px;
+    color: #8f5eaa;
+    font-weight: 500;
+}
+.modal-body form input[type="text"],
+.modal-body form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0bde7;
+    background-color: #fff0f6;
+}
+.modal-body form input[type="submit"] {
+    background-color: #e26aa5;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+}
+.modal-body form input[type="submit"]:hover {
+    background-color: #d24b8e;
+}
+
+/* Tabla de datos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #f3d6eb;
+}
+th {
+    background-color: #f8d5f5;
+    color: #5e4b8b;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+tr:hover {
+    background-color: #fce8f2;
+}
+a {
+    color: #c084fc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

@@ -210,5 +210,13 @@ def insertar_usuario():
     
     return redirect('/logout')
 
+@app.route('/verusuarios', methods=['GET'])
+def verusuarios():
+    cursor=conexion.cursor()
+    sql="Select * from tbusuario"
+    cursor.execute(sql)
+    mostrar=cursor.fetchall()
+    return render_template('verusuarios.html',mostrar=mostrar)
+
 if __name__=='__main__':
     app.run(debug=True)

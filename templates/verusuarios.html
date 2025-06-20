@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE USUARIOS</title>
+    <link rel="stylesheet" href="../static/estilos.css">
+
+</head>
+<body>
+    <a href="/">REGRESAR</a>
+    <h2>LISTA DE USUARIOS</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>USER</th>
+            <th>CLAVE</th>
+            <th>ROL</th>
+        </tr>
+        {%for dato in mostrar %}
+        <tr>
+            <td>{{dato[0]}}</td>
+            <td>{{dato[1]}}</td>
+            <td>******</td>
+            <td>{{dato[3]}}</td>
+        </tr>
+        {% endfor %}        
+    </table>
+
+</body>
+</html>
